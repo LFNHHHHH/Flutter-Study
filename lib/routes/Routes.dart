@@ -3,13 +3,16 @@ import '../pages/Tabs.dart';
 import '../pages/Search.dart';
 import '../pages/Form.dart';
 import '../pages/Product.dart';
+import '../pages/ProductInfo.dart';
 
 // 配置路由
 final routes = {
-  '/': (context, {arguments}) => Tabs(),
+  '/': (context) => Tabs(),
   '/search': (context, {arguments}) => SearchPage(arguments: arguments),
-  '/form': (context, {arguments}) => FormPage(),
+  '/form': (context) => FormPage(),
   '/product': (context) => ProductPage(),
+  '/productinfo': (context, {arguments}) =>
+      ProductInfoPage(arguments: arguments),
 };
 
 // 固定写法

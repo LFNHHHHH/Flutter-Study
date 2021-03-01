@@ -20,7 +20,8 @@ class _ProductPageState extends State<ProductPage> {
               RaisedButton(
                   child: Text('跳转到商品详情'),
                   onPressed: () {
-                    // Navigator.pushNamed(context, '/product');
+                    Navigator.pushNamed(context, '/productinfo',
+                        arguments: {'pid': 3366});
                   }),
               // SizedBox(height: 20),
             ],
