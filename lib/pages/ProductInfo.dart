@@ -17,7 +17,8 @@ class _ProductInfoPageState extends State<ProductInfoPage> {
     return Container(
         child: Scaffold(
       appBar: AppBar(title: Text('商品详情')),
-      body: Text('pid=${arguments['pid']}'),
+      // body: Text('pid=${arguments['pid']}'),
+      body: Text('pid: ${widget.arguments['pid']}'),
     ));
   }
 }
