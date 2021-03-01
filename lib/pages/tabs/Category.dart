@@ -10,17 +10,40 @@ class CategoryPage extends StatefulWidget {
 class _CategoryPageState extends State<CategoryPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          RaisedButton(
-              child: Text('跳转到表单页面并传值'),
-              color: Theme.of(context).accentColor,
-              textTheme: ButtonTextTheme.primary,
-              onPressed: () {
-                Navigator.pushNamed(context, '/form');
-              }),
-        ]);
+    return DefaultTabController(
+        length: 2,
+        child: Scaffold(
+            appBar: AppBar(
+              title: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: TabBar(
+                      tabs: <Widget>[
+                        Tab(text: '热门'),
+                        Tab(text: '推荐'),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            body: TabBarView(
+              children: <Widget>[
+                ListView(
+                  children: <Widget>[
+                    ListTile(title: Text('第一个 tab')),
+                    ListTile(title: Text('第一个 tab')),
+                    ListTile(title: Text('第一个 tab')),
+                  ],
+                ),
+                ListView(
+                  children: <Widget>[
+                    ListTile(title: Text('第二个 tab')),
+                    ListTile(title: Text('第二个 tab')),
+                    ListTile(title: Text('第二个 tab')),
+                  ],
+                ),
+              ],
+            )));
   }
 }

@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       // home: Tabs(),
-      initialRoute: '/appbardemo',
+      initialRoute: '/',
       onGenerateRoute: onGenerateRoute,
     );
   }
