@@ -15,18 +15,9 @@ class _HomePageState extends State<HomePage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         RaisedButton(
-            child: Text('跳转到搜索页面2'),
-            color: Theme.of(context).accentColor,
-            textTheme: ButtonTextTheme.primary,
+            child: Text('跳转到AppBarDemo页面'),
             onPressed: () {
-              Navigator.pushNamed(context, '/search', arguments: {
-                "content": "ok" //参数map
-              });
-            }),
-        RaisedButton(
-            child: Text('跳转到商品页面'),
-            onPressed: () {
-              Navigator.pushNamed(context, '/product');
+              Navigator.pushNamed(context, '/appbardemo');
             }),
         // SizedBox(height: 20),
       ],

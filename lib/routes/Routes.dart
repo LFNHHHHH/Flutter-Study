@@ -4,6 +4,7 @@ import '../pages/Search.dart';
 import '../pages/Form.dart';
 import '../pages/Product.dart';
 import '../pages/ProductInfo.dart';
+import '../pages/AppBarDemo.dart';
 
 // 配置路由
 final routes = {
@@ -13,6 +14,7 @@ final routes = {
   '/product': (context) => ProductPage(),
   '/productinfo': (context, {arguments}) =>
       ProductInfoPage(arguments: arguments),
+  '/appbardemo': (context) => AppBarDemoPage(),
 };
 
 // 固定写法
