@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import '../pages/Tabs.dart';
 import '../pages/Search.dart';
 import '../pages/Form.dart';
+import '../pages/Product.dart';
 
 // 配置路由
 final routes = {
   '/': (context, {arguments}) => Tabs(),
   '/search': (context, {arguments}) => SearchPage(arguments: arguments),
-  '/form': (context, {arguments}) => FormPage()
+  '/form': (context, {arguments}) => FormPage(),
+  '/product': (context) => ProductPage(),
 };
 
 // 固定写法

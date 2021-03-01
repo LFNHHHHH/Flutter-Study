@@ -23,6 +23,11 @@ class _HomePageState extends State<HomePage> {
                 "content": "ok" //参数map
               });
             }),
+        RaisedButton(
+            child: Text('跳转到商品页面'),
+            onPressed: () {
+              Navigator.pushNamed(context, '/product');
+            }),
         // SizedBox(height: 20),
       ],
     );
