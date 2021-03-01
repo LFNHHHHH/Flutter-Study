@@ -5,34 +5,37 @@ class AppBarDemoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text('AppBarDemoPage'),
-          // backgroundColor: Colors.red,
-          centerTitle: true,
-          leading: IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () {
-              print('menu');
-            },
-          ),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {
-                print('search');
-              },
+    return DefaultTabController(
+        length: 2,
+        child: Scaffold(
+            appBar: AppBar(
+              title: Text('AppBarDemoPage'),
+              // backgroundColor: Colors.red,
+              centerTitle: true,
+              bottom: TabBar(
+                tabs: <Widget>[
+                  Tab(text: '热门'),
+                  Tab(text: '推荐'),
+                ],
+              ),
             ),
-            IconButton(
-              icon: Icon(Icons.settings),
-              onPressed: () {
-                print('settings');
-              },
-            ),
-          ],
-        ),
-        body: Container(
-          child: Text('你好 flutter'),
-        ));
+            body: TabBarView(
+              children: <Widget>[
+                ListView(
+                  children: <Widget>[
+                    ListTile(title: Text('第一个 tab')),
+                    ListTile(title: Text('第一个 tab')),
+                    ListTile(title: Text('第一个 tab')),
+                  ],
+                ),
+                ListView(
+                  children: <Widget>[
+                    ListTile(title: Text('第二个 tab')),
+                    ListTile(title: Text('第二个 tab')),
+                    ListTile(title: Text('第二个 tab')),
+                  ],
+                ),
+              ],
+            )));
   }
 }
