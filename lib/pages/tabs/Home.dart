@@ -19,6 +19,11 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               Navigator.pushNamed(context, '/appbardemo');
             }),
+        RaisedButton(
+            child: Text('TabController定义tab切换'),
+            onPressed: () {
+              Navigator.pushNamed(context, '/tabbarcontroller');
+            }),
         // SizedBox(height: 20),
       ],
     );

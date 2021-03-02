@@ -5,6 +5,7 @@ import '../pages/Form.dart';
 import '../pages/Product.dart';
 import '../pages/ProductInfo.dart';
 import '../pages/AppBarDemo.dart';
+import '../pages/TabBarController.dart';
 
 // 配置路由
 final routes = {
@@ -15,6 +16,7 @@ final routes = {
   '/productinfo': (context, {arguments}) =>
       ProductInfoPage(arguments: arguments),
   '/appbardemo': (context) => AppBarDemoPage(),
+  '/tabbarcontroller': (context) => TabBarControllerPage(),
 };
 
 // 固定写法
