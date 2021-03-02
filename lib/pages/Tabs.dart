@@ -48,6 +48,44 @@ class _TabsState extends State<Tabs> {
           });
         },
       ),
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: DrawerHeader(
+                    child: Text('你好flutter'),
+                  ),
+                )
+              ],
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.home),
+              ),
+              title: Text('我的空间'),
+            ),
+            Divider(),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.people),
+              ),
+              title: Text('用户中心'),
+            ),
+            Divider(),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.settings),
+              ),
+              title: Text('设置中心'),
+            ),
+          ],
+        ),
+      ),
+      endDrawer: Drawer(
+        child: Text('右侧侧边栏'),
+      ),
     );
   }
 }
