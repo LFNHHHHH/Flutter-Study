@@ -25,9 +25,29 @@ class _TabsState extends State<Tabs> {
       appBar: AppBar(
         title: Text('flutter demo'),
       ),
+      floatingActionButton: Container(
+          height: 70,
+          width: 70,
+          padding: EdgeInsets.all(8),
+          margin: EdgeInsets.only(bottom: 5),
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(35)),
+          child: FloatingActionButton(
+            child: Icon(
+              Icons.add,
+            ),
+            onPressed: () {
+              setState(() {
+                this._currentIndex = 1;
+              });
+            },
+            backgroundColor: this._currentIndex == 1 ? Colors.red : Colors.blue,
+          )),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: this._pageList[this._currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: this._currentIndex,
+        selectedItemColor: Colors.red,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -72,6 +92,10 @@ class _TabsState extends State<Tabs> {
                 child: Icon(Icons.people),
               ),
               title: Text('用户中心'),
+              onTap: () {
+                Navigator.of(context).pop(); // 隐藏侧边栏
+                Navigator.pushNamed(context, '/product'); // 路由跳转
+              },
             ),
             Divider(),
             ListTile(

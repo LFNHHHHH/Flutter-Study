@@ -14,7 +14,7 @@ class AppBarDemoPage extends StatelessWidget {
               centerTitle: true,
               bottom: TabBar(
                 tabs: <Widget>[
-                  Tab(text: '热门'),
+                  Tab(text: '热门1'),
                   Tab(text: '推荐'),
                 ],
               ),
