@@ -25,29 +25,9 @@ class _TabsState extends State<Tabs> {
       appBar: AppBar(
         title: Text('flutter demo'),
       ),
-      floatingActionButton: Container(
-          height: 70,
-          width: 70,
-          padding: EdgeInsets.all(8),
-          margin: EdgeInsets.only(bottom: 5),
-          decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(35)),
-          child: FloatingActionButton(
-            child: Icon(
-              Icons.add,
-            ),
-            onPressed: () {
-              setState(() {
-                this._currentIndex = 1;
-              });
-            },
-            backgroundColor: this._currentIndex == 1 ? Colors.red : Colors.blue,
-          )),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: this._pageList[this._currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: this._currentIndex,
-        selectedItemColor: Colors.red,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -67,48 +47,6 @@ class _TabsState extends State<Tabs> {
             this._currentIndex = index;
           });
         },
-      ),
-      drawer: Drawer(
-        child: Column(
-          children: <Widget>[
-            Row(
-              children: <Widget>[
-                Expanded(
-                  child: DrawerHeader(
-                    child: Text('你好flutter'),
-                  ),
-                )
-              ],
-            ),
-            ListTile(
-              leading: CircleAvatar(
-                child: Icon(Icons.home),
-              ),
-              title: Text('我的空间'),
-            ),
-            Divider(),
-            ListTile(
-              leading: CircleAvatar(
-                child: Icon(Icons.people),
-              ),
-              title: Text('用户中心'),
-              onTap: () {
-                Navigator.of(context).pop(); // 隐藏侧边栏
-                Navigator.pushNamed(context, '/product'); // 路由跳转
-              },
-            ),
-            Divider(),
-            ListTile(
-              leading: CircleAvatar(
-                child: Icon(Icons.settings),
-              ),
-              title: Text('设置中心'),
-            ),
-          ],
-        ),
-      ),
-      endDrawer: Drawer(
-        child: Text('右侧侧边栏'),
       ),
     );
   }

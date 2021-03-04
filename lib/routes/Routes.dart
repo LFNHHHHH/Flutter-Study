@@ -1,22 +1,9 @@
 import 'package:flutter/material.dart';
 import '../pages/Tabs.dart';
-import '../pages/Search.dart';
-import '../pages/Form.dart';
-import '../pages/Product.dart';
-import '../pages/ProductInfo.dart';
-import '../pages/AppBarDemo.dart';
-import '../pages/TabBarController.dart';
 
 // 配置路由
 final routes = {
   '/': (context) => Tabs(),
-  '/search': (context, {arguments}) => SearchPage(arguments: arguments),
-  '/form': (context) => FormPage(),
-  '/product': (context) => ProductPage(),
-  '/productinfo': (context, {arguments}) =>
-      ProductInfoPage(arguments: arguments),
-  '/appbardemo': (context) => AppBarDemoPage(),
-  '/tabbarcontroller': (context) => TabBarControllerPage(),
 };
 
 // 固定写法

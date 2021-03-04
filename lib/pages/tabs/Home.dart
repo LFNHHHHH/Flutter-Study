@@ -14,16 +14,7 @@ class _HomePageState extends State<HomePage> {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        RaisedButton(
-            child: Text('跳转到AppBarDemo页面'),
-            onPressed: () {
-              Navigator.pushNamed(context, '/appbardemo');
-            }),
-        RaisedButton(
-            child: Text('TabController定义tab切换'),
-            onPressed: () {
-              Navigator.pushNamed(context, '/tabbarcontroller');
-            }),
+        RaisedButton(child: Text('一个空的按钮'), onPressed: null),
         // SizedBox(height: 20),
       ],
     );
