@@ -22,13 +22,17 @@ class _TextFieldDemoPageState extends State<TextFieldDemoPage> {
               padding: EdgeInsets.all(20),
               child: Column(
                 children: <Widget>[
-                  Checkbox(
-                      value: this.flag,
-                      onChanged: (v) {
-                        setState(() {
-                          this.flag = v;
-                        });
-                      })
+                  CheckboxListTile(
+                    value: this.flag,
+                    onChanged: (v) {
+                      this.setState(() {
+                        this.flag = v;
+                      });
+                    },
+                    title: Text('标题'),
+                    subtitle: Text('二级标题'),
+                    secondary: Icon(Icons.help),
+                  )
                 ],
               ),
             )
