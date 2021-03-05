@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../Tabs.dart';
 
 class SettingPage extends StatefulWidget {
   SettingPage({Key key}) : super(key: key);

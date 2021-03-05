@@ -14,7 +14,11 @@ class _HomePageState extends State<HomePage> {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        RaisedButton(child: Text('一个空的按钮'), onPressed: null),
+        RaisedButton(
+            child: Text('跳到表单演示页面'),
+            onPressed: () {
+              Navigator.pushNamed(context, '/textfield');
+            }),
         // SizedBox(height: 20),
       ],
     );
