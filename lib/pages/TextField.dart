@@ -8,12 +8,7 @@ class TextFieldDemoPage extends StatefulWidget {
 }
 
 class _TextFieldDemoPageState extends State<TextFieldDemoPage> {
-  var _username = new TextEditingController();
-  @override
-  void initState() {
-    super.initState();
-    _username.text = '初始值';
-  }
+  var flag = true;
 
   @override
   Widget build(BuildContext context) {
@@ -27,22 +22,13 @@ class _TextFieldDemoPageState extends State<TextFieldDemoPage> {
               padding: EdgeInsets.all(20),
               child: Column(
                 children: <Widget>[
-                  TextField(
-                    decoration: InputDecoration(hintText: '请输入用户名'),
-                    controller: _username,
-                  ),
-                  SizedBox(height: 20),
-                  Container(
-                    width: double.infinity,
-                    height: 40,
-                    child: RaisedButton(
-                        child: Text('登录'),
-                        color: Colors.blue,
-                        textColor: Colors.white,
-                        onPressed: () {
-                          print(_username.text);
-                        }),
-                  )
+                  Checkbox(
+                      value: this.flag,
+                      onChanged: (v) {
+                        setState(() {
+                          this.flag = v;
+                        });
+                      })
                 ],
               ),
             )
