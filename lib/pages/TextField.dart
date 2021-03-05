@@ -8,7 +8,7 @@ class TextFieldDemoPage extends StatefulWidget {
 }
 
 class _TextFieldDemoPageState extends State<TextFieldDemoPage> {
-  int sex = 1;
+  bool flag = true;
 
   @override
   Widget build(BuildContext context) {
@@ -22,23 +22,13 @@ class _TextFieldDemoPageState extends State<TextFieldDemoPage> {
               padding: EdgeInsets.all(20),
               child: Column(
                 children: <Widget>[
-                  Radio(
-                      value: 1,
-                      groupValue: this.sex,
+                  Switch(
+                      value: this.flag,
                       onChanged: (v) {
                         this.setState(() {
-                          this.sex = v;
+                          this.flag = v;
                         });
-                      }),
-                  Radio(
-                      value: 2,
-                      groupValue: this.sex,
-                      onChanged: (v) {
-                        this.setState(() {
-                          this.sex = v;
-                        });
-                      }),
-                  Text(this.sex == 1 ? '男' : '女')
+                      })
                 ],
               ),
             )
