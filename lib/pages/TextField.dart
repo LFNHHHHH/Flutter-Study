@@ -8,7 +8,7 @@ class TextFieldDemoPage extends StatefulWidget {
 }
 
 class _TextFieldDemoPageState extends State<TextFieldDemoPage> {
-  var flag = true;
+  int sex = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -22,17 +22,23 @@ class _TextFieldDemoPageState extends State<TextFieldDemoPage> {
               padding: EdgeInsets.all(20),
               child: Column(
                 children: <Widget>[
-                  CheckboxListTile(
-                    value: this.flag,
-                    onChanged: (v) {
-                      this.setState(() {
-                        this.flag = v;
-                      });
-                    },
-                    title: Text('标题'),
-                    subtitle: Text('二级标题'),
-                    secondary: Icon(Icons.help),
-                  )
+                  Radio(
+                      value: 1,
+                      groupValue: this.sex,
+                      onChanged: (v) {
+                        this.setState(() {
+                          this.sex = v;
+                        });
+                      }),
+                  Radio(
+                      value: 2,
+                      groupValue: this.sex,
+                      onChanged: (v) {
+                        this.setState(() {
+                          this.sex = v;
+                        });
+                      }),
+                  Text(this.sex == 1 ? '男' : '女')
                 ],
               ),
             )
