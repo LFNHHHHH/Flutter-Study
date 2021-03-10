@@ -15,9 +15,9 @@ class _HomePageState extends State<HomePage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         RaisedButton(
-            child: Text('跳到表单演示页面'),
+            child: Text('一个空的按钮'),
             onPressed: () {
-              Navigator.pushNamed(context, '/textfield');
+              Navigator.pushNamed(context, 'datepicker');
             }),
         // SizedBox(height: 20),
       ],

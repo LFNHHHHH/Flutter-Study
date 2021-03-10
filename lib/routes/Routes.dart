@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import '../pages/Tabs.dart';
-import '../pages/TextField.dart';
+import '../pages/DatePicker.dart';
 
 // 配置路由
 final routes = {
   '/': (context) => Tabs(),
-  '/textfield': (context) => TextFieldDemoPage(),
+  'datepicker': (contenxt) => DatePickerPage(),
 };
 
 // 固定写法
